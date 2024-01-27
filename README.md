@@ -10,7 +10,7 @@
 
 ## Overview
 
-This notebook is derived from the [CXR Foundation](https://github.com/Google-Health/imaging-research/blob/master/cxr-foundation/) demo notebook. It leverages the [Change Healthcare Stratus Imaging PACS](https://www.changehealthcare.com/enterprise-imaging/stratus-imaging/pacs) for creating the annotated datasets in DICOM and the [Google Cloud Medical Imaging Suite (MIS)](https://cloud.google.com/medical-imaging) to process the labeled datasets and uptrain a foundational model. The purpose of this demo is to show that, by implementing this pattern and leveraging a combination of these capabilities on Google Cloud, you can rapidly accelerate the medical imaging ML development process.
+This notebook is derived from the [CXR Foundation](https://github.com/Google-Health/imaging-research/blob/master/cxr-foundation/) demo notebook. It leverages the [Change Healthcare Stratus Imaging PACS](https://www.changehealthcare.com/enterprise-imaging/stratus-imaging/pacs) for creating the annotated datasets in DICOM and the [Google Cloud Medical Imaging Suite (MIS)](https://cloud.google.com/medical-imaging) to process the labeled datasets and uptrain a foundation model. The purpose of this demo is to show that, by implementing this pattern and leveraging a combination of these capabilities on Google Cloud, you can rapidly accelerate the medical imaging ML development process.
 
 ### Medical Imaging Suite (MIS)
 
@@ -22,7 +22,7 @@ Commercial PACS systems are already found in most enterprise imaging environment
 
 ### Google Research CXR Foundational Model
 
-Using foundational models accelerates the data curation and training pipeline development and runtime. Leveraging a foundational model means input data is less than a traditionally trained model, which means less data has to be labeled.
+Using foundation models accelerates the data curation and training pipeline development and runtime. Leveraging a foundation model means input data is less than a traditionally trained model, which means less data has to be labeled.
 
 ## Diagram
 
@@ -55,7 +55,7 @@ _The data that we are using in this demo is de-identified. You may use data with
         <li>Setup or get access to commercial PACS system. In this case we’re given access to a test organization in Change Healthcare Stratus Imaging PACS.</li>
         <li>In order to ingest and retrieve studies en masse, we must deploy an edge server so storage and retrieval of imaging data is easier vs exporting 1x1 through UI.</li>
         <li>Ingest images into PACS through the edge server. We’ll do this by taking 100 positive and 100 negative Pneumothorax studies, and doing a DICOM send (`storescu`) to the edge server.</li>
-        <li>Label images in PACS, labeling each one with a key image / key object selection when there is Pneumothorax present. We’re going to assume any images that do not have a key image associated with them are not positive for Pneumothorax. We’re only labeling a small portion of studies because we want to be able to leverage the CXR foundational model.</li>
+        <li>Label images in PACS, labeling each one with a key image / key object selection when there is Pneumothorax present. We’re going to assume any images that do not have a key image associated with them are not positive for Pneumothorax. We’re only labeling a small portion of studies because we want to be able to leverage the CXR foundation model.</li>
         <li>Once you've labeled the 100 positive Pneumothorax studies, it's time to export all of the studies to Healthcare API DICOM Store.</li>
       </ul>
     </td>
@@ -70,5 +70,5 @@ _At the end of the notebook we will have a modal that can detect Pneumothorax in
 
 ## Takeaways
 
-- We hope this content has shown that a combination of PACS, MIS, and a foundational model, can accelerate multiple steps in the Medical Imaging AI development pipeline.
+- We hope this content has shown that a combination of PACS, MIS, and a foundation model, can accelerate multiple steps in the Medical Imaging AI development pipeline.
 - Annotated data from a commercial PACS systems can be used as labeled data in an ML training pipeline as long as it is fully accessible and there is a deterministic transform, prioritizing DICOM.
