@@ -162,5 +162,4 @@ cython_debug/
 data/inputs/
 data/outputs/
 terraform
-/tf/
 imaging-research-*

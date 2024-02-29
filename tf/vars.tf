@@ -22,3 +22,12 @@ variable "table_id" {
  type = string
  default = "metadata"
 }
+
+variable "vertex_endpoint_name" {
+ type = string
+ default = "vertex-endpoint"
+}
+
+variable "gcs_bucket_name" {
+ type = string
+}
