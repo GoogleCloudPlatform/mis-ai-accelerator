@@ -30,4 +30,5 @@ variable "vertex_endpoint_name" {
 
 variable "gcs_bucket_name" {
  type = string
+ default = "model-bucket"
 }
